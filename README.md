@@ -294,4 +294,5 @@ Lengkapi sebelum submit:
 - Usahakan commit history menunjukkan kontribusi anggota.
 - Jika repository private, beri akses ke dosen.
 #   M I D - S S D - W e b - S e k o l a h - W e b - M a n a j e m e n - P e n g g u n a  
+ #   M I D - S S D - W e b - S e k o l a h - W e b - M a n a j e m e n - P e n g g u n a  
  
