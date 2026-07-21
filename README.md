@@ -302,7 +302,7 @@ Berikut dokumentasi visual yang sudah disertakan:
 
 - Link video presentasi YouTube: [https://youtu.be/ExdHQ5Jqu8M](https://youtu.be/ExdHQ5Jqu8M)
 - Link repository GitHub: [https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna](https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna)
-- Link dokumen laporan PDF: belum tersedia
+- Link dokumen laporan PDF: [https://drive.google.com/file/d/1H_EaOyWnxdu9F3UYOQ_gAJNA7d-Lo9IS/view?usp=sharing](https://drive.google.com/file/d/1H_EaOyWnxdu9F3UYOQ_gAJNA7d-Lo9IS/view?usp=sharing)
 
 ## Catatan Repository
 
