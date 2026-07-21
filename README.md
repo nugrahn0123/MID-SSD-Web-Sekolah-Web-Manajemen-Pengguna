@@ -120,21 +120,18 @@ Penjelasan singkat:
 
 ## Pembagian vCPU / Server Virtual
 
-Contoh pembagian vCPU:
+Pembagian vCPU yang sesuai implementasi project saat ini:
 
-1. vCPU 1: Modul Jurnal Mengajar
-2. vCPU 2: Modul BK
-3. vCPU 3: Modul Data Kesiswaan
-4. vCPU 4: Modul Akademik dan Manajemen Pengguna
-5. vCPU 5: Database MySQL terpusat
-6. vCPU 6: Load balancer, monitoring, logging, dan backup
+1. vCPU 1-2: Aplikasi Laravel (web server + PHP runtime) untuk seluruh modul dalam satu codebase
+2. vCPU 3: Database MySQL terpusat
+3. vCPU 4: Reverse proxy, monitoring, logging, dan backup scheduler
 
 Alasan teknis:
 
-- Jurnal Mengajar cenderung ramai saat jam sekolah
-- BK dipisahkan karena data sensitif
-- Database dipisahkan agar I/O dan konsistensi data lebih terjaga
-- User Management dipusatkan agar login dan hak akses tidak tersebar
+- Seluruh modul masih berjalan dalam satu aplikasi Laravel (modular monolith), jadi tidak dipisah per-modul ke VM terpisah
+- Database dipisahkan agar beban I/O dan konsistensi data tetap terjaga
+- Layer reverse proxy dan observability dipisahkan agar deployment, logging, dan backup lebih terkontrol
+- Skema ini mudah di-scale: menambah vCPU aplikasi lebih dulu saat trafik meningkat
 
 ## Unsur Scalable System Design
 
@@ -275,20 +272,37 @@ Contoh penggunaan:
 
 ## Screenshot dan Diagram
 
-Tambahkan ke repository sebelum pengumpulan:
+Berikut dokumentasi visual yang sudah disertakan:
 
-- screenshot halaman login
-- screenshot dashboard admin
-- screenshot manajemen pengguna
-- screenshot audit log
-- ERD database
-- diagram arsitektur sistem
+### Halaman Login
+
+![Screenshot Halaman Login](img/screenshoot-login.png)
+
+### Dashboard Admin
+
+![Screenshot Dashboard Admin](img/screenshot-halaman-dashboard.png)
+
+### Manajemen Pengguna
+
+![Screenshot Manajemen Pengguna](img/screenshoot-manajemen-pengguna.png)
+
+### Audit Log Aktivitas
+
+![Screenshot Audit Log](img/screenshoot-aktivitas-log.png)
+
+### ERD Database
+
+![ERD Database](img/relasi-antar-tabel.png)
+
+### Diagram Arsitektur Sistem
+
+![Diagram Arsitektur Sistem](img/diagram-arsitektur.png)
 
 ## Link Pengumpulan
 
 - Link video presentasi YouTube: [https://youtu.be/ExdHQ5Jqu8M](https://youtu.be/ExdHQ5Jqu8M)
 - Link repository GitHub: [https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna](https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna)
-- Link dokumen laporan PDF: isi di sini
+- Link dokumen laporan PDF: belum tersedia
 
 ## Catatan Repository
 
