@@ -29,22 +29,19 @@ Dalam arsitektur sistem penuh, modul ini menjadi **sumber identitas utama** untu
 
 ## Nama Anggota Kelompok
 
-Isi sesuai data kelompok:
-
-- Nama anggota 1 - NIM - Kelas
-- Nama anggota 2 - NIM - Kelas
-- Nama anggota 3 - NIM - Kelas
-- Nama anggota 4 - NIM - Kelas
+- Ferdi Ardiansyah
+- Anugrah
+- Muh Arsy Alfarabi
+- Anshori Ikhsan
 
 ## Pembagian Tugas
 
-Isi sesuai pembagian kelompok. Contoh pembagian:
+Pembagian tugas kelompok:
 
-- **System Analyst / Project Lead**: latar belakang, tujuan proyek, analisis kebutuhan, use case, alur integrasi modul
-- **System Architect**: rancangan arsitektur modular, pembagian vCPU, strategi scaling, monitoring
-- **Database Designer**: rancangan tabel, relasi, indeks, dan ERD
-- **Security and Access Control Designer**: login, logout, reset password, RBAC, audit log, mitigasi risiko keamanan
-- **UI/UX and Documentation Designer**: layout antarmuka, dokumentasi README, screenshot, narasi presentasi
+- **Ferdi Ardiansyah**: latar belakang, tujuan proyek, dan use case
+- **Anugrah**: modul jurnal mengajar dan modul BK
+- **Muh Arsy Alfarabi**: data kesiswaan, hak akses, dan database
+- **Anshori Ikhsan**: arsitektur, pembagian vCPU, scaling, dan penutup
 
 ## Modul Dalam Sistem Sekolah
 
