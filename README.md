@@ -9,10 +9,6 @@ Repository ini berisi implementasi **Modul Manajemen Pengguna** untuk proyek MID
 - **Mata Kuliah**: Scalable System Design
 - **Stack**: Laravel 13, PHP 8.3, MySQL 8, Bootstrap 5, Laravel Sanctum
 
-## Link Presentasi
-
-- **Video Presentasi (YouTube)**: [https://youtu.be/ExdHQ5Jqu8M](https://youtu.be/ExdHQ5Jqu8M)
-
 ## Deskripsi Sistem
 
 Sistem sekolah dirancang modular agar mudah dikembangkan dan diskalakan. Repository ini mengelola:
