@@ -1,19 +1,31 @@
-# Web Sekolah Terintegrasi Berbasis Scalable System Design
+# Web Sekolah Terintegrasi - Modul Manajemen Pengguna
 
-Repository ini berisi implementasi **Modul Manajemen Pengguna** untuk proyek MID mata kuliah Scalable System Design. Modul ini berperan sebagai pusat autentikasi, otorisasi, audit log, dan integrasi API bagi modul lain seperti Jurnal Mengajar, BK, Data Kesiswaan, dan Akademik.
+Repository ini berisi implementasi **Modul Manajemen Pengguna** untuk proyek MID mata kuliah Scalable System Design. Modul ini menjadi pusat autentikasi, otorisasi, audit log, dan integrasi API untuk modul lain seperti Jurnal Mengajar, BK, Kesiswaan, dan Akademik.
 
-## Identitas Proyek
+## Informasi Proyek
 
-- Judul proyek: Web Sekolah Terintegrasi Berbasis Scalable System Design
-- Fokus repository: Modul Manajemen Pengguna
-- Mata kuliah: Scalable System Design
-- Stack: Laravel 13, PHP 8.3, MySQL 8, Bootstrap 5, Laravel Sanctum
+- **Judul Proyek**: Web Sekolah Terintegrasi Berbasis Scalable System Design
+- **Fokus Repository**: Modul Manajemen Pengguna
+- **Mata Kuliah**: Scalable System Design
+- **Stack**: Laravel 13, PHP 8.3, MySQL 8, Bootstrap 5, Laravel Sanctum
 
-## Deskripsi Singkat Sistem
+## Link Presentasi
 
-Sistem sekolah dibagi menjadi beberapa modul agar mudah dikembangkan dan lebih scalable. Repository ini mengerjakan modul yang mengelola login, logout, reset password, role-based access control, manajemen akun, manajemen role, audit log, dan endpoint API untuk verifikasi user antar-modul.
+- **Video Presentasi (YouTube)**: [https://youtu.be/ExdHQ5Jqu8M](https://youtu.be/ExdHQ5Jqu8M)
 
-Dalam rancangan sistem penuh, modul ini menjadi sumber identitas utama untuk seluruh ekosistem aplikasi sekolah. Modul lain tidak menyimpan logika login sendiri, tetapi memanfaatkan API dari modul ini.
+## Deskripsi Sistem
+
+Sistem sekolah dirancang modular agar mudah dikembangkan dan diskalakan. Repository ini mengelola:
+
+- login dan logout
+- reset password
+- role-based access control (RBAC)
+- manajemen akun pengguna
+- manajemen role
+- audit log aktivitas
+- API verifikasi user untuk integrasi antar-modul
+
+Dalam arsitektur sistem penuh, modul ini menjadi **sumber identitas utama** untuk seluruh ekosistem aplikasi sekolah.
 
 ## Nama Anggota Kelompok
 
@@ -26,39 +38,39 @@ Isi sesuai data kelompok:
 
 ## Pembagian Tugas
 
-Isi sesuai pembagian kelompok. Contoh yang sesuai dengan brief dosen:
+Isi sesuai pembagian kelompok. Contoh pembagian:
 
-- System Analyst / Project Lead: latar belakang, tujuan proyek, analisis kebutuhan, use case, alur integrasi modul.
-- System Architect: rancangan modular monolith/service-based, pembagian vCPU, API integration, scaling strategy, monitoring.
-- Database Designer: rancangan tabel, relasi, indeks, konsistensi data, ERD.
-- Security and Access Control Designer: login, logout, reset password, RBAC, audit log, mitigasi risiko keamanan.
-- UI/UX and Documentation Designer: layout antarmuka, dokumentasi README, screenshot, dan narasi presentasi.
+- **System Analyst / Project Lead**: latar belakang, tujuan proyek, analisis kebutuhan, use case, alur integrasi modul
+- **System Architect**: rancangan arsitektur modular, pembagian vCPU, strategi scaling, monitoring
+- **Database Designer**: rancangan tabel, relasi, indeks, dan ERD
+- **Security and Access Control Designer**: login, logout, reset password, RBAC, audit log, mitigasi risiko keamanan
+- **UI/UX and Documentation Designer**: layout antarmuka, dokumentasi README, screenshot, narasi presentasi
 
 ## Modul Dalam Sistem Sekolah
 
-Sistem sekolah yang dibahas pada presentasi dapat dijelaskan sebagai berikut:
+Sistem sekolah pada presentasi terdiri dari:
 
-- Modul Manajemen Pengguna: mengatur autentikasi, otorisasi, akun, role, audit log, dan API verifikasi identitas.
-- Modul Jurnal Mengajar: dipakai guru untuk input jurnal pembelajaran.
-- Modul BK: dipakai guru BK untuk data konseling, pelanggaran, prestasi, dan tindak lanjut siswa.
-- Modul Data Kesiswaan: dipakai untuk data inti siswa, kelas, dan status siswa.
-- Modul Akademik: dipakai untuk nilai, jadwal, kelas, dan data pembelajaran.
+- **Modul Manajemen Pengguna**: autentikasi, otorisasi, akun, role, audit log, API verifikasi identitas
+- **Modul Jurnal Mengajar**: input jurnal pembelajaran guru
+- **Modul BK**: data konseling, pelanggaran, prestasi, dan tindak lanjut siswa
+- **Modul Data Kesiswaan**: data inti siswa, kelas, dan status siswa
+- **Modul Akademik**: nilai, jadwal, kelas, dan data pembelajaran
 
-Repository ini hanya mengimplementasikan **Modul Manajemen Pengguna**, tetapi desain integrasinya sudah disiapkan untuk modul lain.
+Repository ini hanya mengimplementasikan **Modul Manajemen Pengguna**, namun desain integrasinya disiapkan untuk modul lain.
 
 ## Fitur Yang Sudah Diimplementasikan
 
-- Login dan logout berbasis session.
-- Reset password.
-- Redirect dashboard berdasarkan role.
-- Middleware RBAC berbasis role.
-- Helper cek role pada view.
-- Manajemen akun pengguna oleh admin.
-- Manajemen role oleh admin.
-- Search dan filter pengguna berdasarkan role/status.
-- Audit log aktivitas login, logout, dan perubahan data penting.
-- API integrasi antar-modul berbasis token Sanctum.
-- Data dummy untuk akun demo.
+- Login dan logout berbasis session
+- Reset password
+- Redirect dashboard berdasarkan role
+- Middleware RBAC berbasis role
+- Helper cek role pada view
+- Manajemen akun pengguna oleh admin
+- Manajemen role oleh admin
+- Search dan filter pengguna berdasarkan role/status
+- Audit log aktivitas login, logout, dan perubahan data penting
+- API integrasi antar-modul berbasis token Sanctum
+- Data dummy untuk akun demo
 
 ## Role dan Hak Akses
 
@@ -74,18 +86,16 @@ Role default yang tersedia:
 
 Ringkasan akses:
 
-- Admin dapat mengelola akun, role, dan melihat audit log.
-- Kepala sekolah dapat mengakses dashboard monitoring.
-- Guru diarahkan ke dashboard yang nantinya terhubung ke modul jurnal mengajar.
-- Guru BK diarahkan ke dashboard yang nantinya terhubung ke modul BK.
-- Wali kelas diarahkan ke dashboard yang nantinya terhubung ke data kelas/akademik.
-- Siswa dan orang tua hanya melihat menu relevan untuk perannya.
+- Admin dapat mengelola akun, role, dan melihat audit log
+- Kepala sekolah dapat mengakses dashboard monitoring
+- Guru diarahkan ke dashboard yang nantinya terhubung ke modul jurnal mengajar
+- Guru BK diarahkan ke dashboard yang nantinya terhubung ke modul BK
+- Wali kelas diarahkan ke dashboard yang nantinya terhubung ke data kelas/akademik
+- Siswa dan orang tua hanya melihat menu relevan untuk perannya
 
 ## Rancangan Arsitektur Sistem
 
-Pendekatan yang dipakai untuk proyek MID ini adalah **modular monolith dengan integrasi API internal**.
-
-Gambaran arsitektur presentasi:
+Pendekatan yang dipakai adalah **modular monolith dengan integrasi API internal**.
 
 ```text
 [Client Browser / Mobile]
@@ -104,16 +114,16 @@ Gambaran arsitektur presentasi:
                   [Centralized MySQL Database]
 ```
 
-Penjelasan yang bisa dipakai saat presentasi:
+Penjelasan singkat:
 
-- Modul dipisah berdasarkan domain bisnis agar tidak saling bercampur.
-- Modul Manajemen Pengguna menyediakan login, verifikasi token, dan data role.
-- Database tetap terpusat agar data user, siswa, guru, dan aktivitas konsisten.
-- Modul dengan trafik tinggi dapat dipisah ke service atau node sendiri pada tahap scale-out.
+- Modul dipisah berdasarkan domain bisnis agar tidak saling bercampur
+- Modul Manajemen Pengguna menyediakan login, verifikasi token, dan data role
+- Database terpusat menjaga konsistensi data user, siswa, guru, dan aktivitas
+- Modul dengan trafik tinggi dapat dipisah ke service atau node sendiri saat scale-out
 
 ## Pembagian vCPU / Server Virtual
 
-Contoh pembagian vCPU yang sesuai dengan brief dosen:
+Contoh pembagian vCPU:
 
 1. vCPU 1: Modul Jurnal Mengajar
 2. vCPU 2: Modul BK
@@ -122,31 +132,29 @@ Contoh pembagian vCPU yang sesuai dengan brief dosen:
 5. vCPU 5: Database MySQL terpusat
 6. vCPU 6: Load balancer, monitoring, logging, dan backup
 
-Alasan teknis singkat:
+Alasan teknis:
 
-- Jurnal Mengajar cenderung ramai saat jam sekolah.
-- BK dipisahkan karena data sensitif.
-- Database dipisahkan agar I/O dan konsistensi data lebih terjaga.
-- User Management dipusatkan agar login dan hak akses tidak tersebar di banyak modul.
+- Jurnal Mengajar cenderung ramai saat jam sekolah
+- BK dipisahkan karena data sensitif
+- Database dipisahkan agar I/O dan konsistensi data lebih terjaga
+- User Management dipusatkan agar login dan hak akses tidak tersebar
 
 ## Unsur Scalable System Design
 
-Unsur yang sudah atau dapat dijelaskan dari modul ini:
-
-1. Modular architecture: manajemen pengguna dipisah dari jurnal, BK, dan kesiswaan.
-2. Centralized database: tabel users, roles, dan activity_logs menjadi basis bersama.
-3. API-based integration: modul lain memverifikasi token dan role melalui endpoint API.
-4. Role-based access control: akses dibatasi sesuai role user.
-5. Logging dan audit trail: aktivitas sensitif dicatat ke activity_logs.
-6. Database optimization: foreign key dan struktur relasi dibuat jelas.
-7. Horizontal scaling: service login/API verifikasi dapat dipisah saat trafik meningkat.
-8. Vertical scaling: database server dapat ditambah CPU, RAM, atau storage.
-9. Caching: daftar role/menu dapat di-cache pada tahap optimasi berikutnya.
-10. Monitoring: audit log dan statistik aktivitas menjadi dasar observabilitas awal.
+1. Modular architecture: manajemen pengguna dipisah dari jurnal, BK, dan kesiswaan
+2. Centralized database: tabel users, roles, dan activity_logs sebagai basis bersama
+3. API-based integration: modul lain memverifikasi token dan role melalui endpoint API
+4. Role-based access control: akses dibatasi sesuai role user
+5. Logging dan audit trail: aktivitas sensitif dicatat ke activity_logs
+6. Database optimization: foreign key dan struktur relasi dibuat jelas
+7. Horizontal scaling: service login/API verifikasi dapat dipisah saat trafik meningkat
+8. Vertical scaling: database server dapat ditambah CPU, RAM, atau storage
+9. Caching: daftar role/menu dapat di-cache pada tahap optimasi berikutnya
+10. Monitoring: audit log dan statistik aktivitas sebagai observabilitas awal
 
 ## Rancangan Database
 
-Repository ini mengimplementasikan tabel berikut untuk modul manajemen pengguna:
+Tabel utama modul manajemen pengguna:
 
 - roles
 - users
@@ -160,7 +168,7 @@ Relasi utama:
 - activity_logs.user_id -> users.id
 - personal_access_tokens.tokenable -> users
 
-Dalam sistem sekolah penuh, tabel ini menjadi bagian dari database pusat yang juga akan dipakai bersama tabel students, teachers, classes, subjects, schedules, teaching_journals, dan tabel domain lain.
+Dalam sistem sekolah penuh, tabel ini menjadi bagian dari database pusat bersama tabel domain lain seperti students, teachers, classes, subjects, schedules, dan teaching_journals.
 
 ## Struktur Folder Proyek
 
@@ -203,7 +211,7 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 
-Jika memakai Laragon seperti environment pengembangan saat ini, proyek dapat diakses melalui:
+Jika memakai Laragon seperti environment pengembangan saat ini:
 
 ```text
 http://localhost/tugas-mid-scalable
@@ -231,7 +239,7 @@ http://127.0.0.1:8000
 
 ## Akun Demo
 
-Password semua akun demo adalah `password123`.
+Password semua akun demo adalah **password123**.
 
 - Admin Sistem: admin@sekolah.sch.id
 - Kepala Sekolah: kepsek@sekolah.sch.id
@@ -245,7 +253,7 @@ Password semua akun demo adalah `password123`.
 
 ## API Integrasi Antar Modul
 
-Endpoint utama yang bisa dipakai modul lain:
+Endpoint utama:
 
 - POST /api/auth/login
 - POST /api/auth/logout
@@ -253,20 +261,20 @@ Endpoint utama yang bisa dipakai modul lain:
 - GET /api/users
 - GET /api/users/{id}/role
 
-Contoh penggunaan integrasi:
+Contoh penggunaan:
 
-- Modul Jurnal Mengajar memanggil `/api/auth/verify` untuk memastikan user ber-role `guru`.
-- Modul BK memanggil `/api/auth/verify` untuk memastikan user ber-role `guru_bk`.
-- Modul Akademik dapat memanggil `/api/users?role=guru` untuk kebutuhan lookup data guru.
-- Modul lain dapat menggunakan `/api/users/{id}/role` untuk validasi akses lanjutan.
+- Modul Jurnal Mengajar memanggil /api/auth/verify untuk memastikan user ber-role guru
+- Modul BK memanggil /api/auth/verify untuk memastikan user ber-role guru_bk
+- Modul Akademik dapat memanggil /api/users?role=guru untuk lookup data guru
+- Modul lain dapat menggunakan /api/users/{id}/role untuk validasi akses lanjutan
 
 ## Risiko Sistem dan Solusi
 
-- Risiko kebocoran akses data sensitif: ditangani dengan RBAC dan middleware role.
-- Risiko penyalahgunaan akun: ditangani dengan password hashing, reset password, dan status aktif/nonaktif.
-- Risiko audit sulit ditelusuri: ditangani dengan activity_logs.
-- Risiko bottleneck login saat trafik naik: mitigasi dengan pemisahan service auth/API dan caching sesi/token.
-- Risiko inkonsistensi data antar-modul: mitigasi dengan database terpusat dan endpoint verifikasi yang sama.
+- Risiko kebocoran akses data sensitif: ditangani dengan RBAC dan middleware role
+- Risiko penyalahgunaan akun: ditangani dengan password hashing, reset password, dan status aktif/nonaktif
+- Risiko audit sulit ditelusuri: ditangani dengan activity_logs
+- Risiko bottleneck login saat trafik naik: mitigasi dengan pemisahan service auth/API dan caching sesi/token
+- Risiko inkonsistensi data antar-modul: mitigasi dengan database terpusat dan endpoint verifikasi yang sama
 
 ## Screenshot dan Diagram
 
@@ -281,18 +289,13 @@ Tambahkan ke repository sebelum pengumpulan:
 
 ## Link Pengumpulan
 
-Lengkapi sebelum submit:
-
-- Link video presentasi YouTube: isi di sini
-- Link repository GitHub: isi di sini
+- Link video presentasi YouTube: [https://youtu.be/ExdHQ5Jqu8M](https://youtu.be/ExdHQ5Jqu8M)
+- Link repository GitHub: [https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna](https://github.com/nugrahn0123/MID-SSD-Web-Sekolah-Web-Manajemen-Pengguna)
 - Link dokumen laporan PDF: isi di sini
 
 ## Catatan Repository
 
-- Jangan commit file `.env` berisi kredensial asli.
-- Gunakan data dummy saja.
-- Usahakan commit history menunjukkan kontribusi anggota.
-- Jika repository private, beri akses ke dosen.
-#   M I D - S S D - W e b - S e k o l a h - W e b - M a n a j e m e n - P e n g g u n a  
- #   M I D - S S D - W e b - S e k o l a h - W e b - M a n a j e m e n - P e n g g u n a  
- 
+- Jangan commit file .env berisi kredensial asli
+- Gunakan data dummy saja
+- Usahakan commit history menunjukkan kontribusi anggota
+- Jika repository private, beri akses ke dosen
